@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SPARE PARTS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            li{color: papayawhip;}
+                     h1{border-style: double; border-color: #ff0000;
+                        background-color: palegoldenrod;
+                     }
+                      
+            .bg{
+                position: absolute;
+                float: right;
+                top: 370px;
+                right: 10px;
+                z-index: 1;
+            }
+            #by{
+                background-color: azure;
+                background-repeat: no-repeat;
+            }
+            .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: aquamarine;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+}
+
+.dropdown:hover .dropdown-content {
+    background: whitesmoke;
+    display: block;
+}
+
+        
+
+        </style>
+     
+  </head>
+  
+    <canvas id="myCanvas" width="1500" height="300" style="border:3px solid white"></canvas>
+    <script>
+      function drawImage(imageObj) {
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+        var imageX = 69;
+        var imageY = 50;
+        var imageWidth = imageObj.width;
+        var imageHeight = imageObj.height;
+
+        context.drawImage(imageObj, imageX, imageY);
+
+        var imageData = context.getImageData(imageX, imageY, imageWidth, imageHeight);
+        var data = imageData.data;
+
+        // iterate over all pixels
+        for(var i = 0, n = data.length; i < n; i += 4) {
+          var red = data[i];
+          var green = data[i + 1];
+          var blue = data[i + 2];
+          var alpha = data[i + 3];
+        }
+
+        // pick out pixel data from x, y coordinate
+        var x = 750;
+        var y = 200;
+        var red = data[((imageWidth * y) + x) * 4];
+        var green = data[((imageWidth * y) + x) * 4 + 1];
+        var blue = data[((imageWidth * y) + x) * 4 + 2];
+        var alpha = data[((imageWidth * y) + x) * 4 + 3];
+        
+        // iterate over all pixels based on x and y coordinates
+        for(var y = 0; y < imageHeight; y++) {
+          // loop through each column
+          for(var x = 0; x < imageWidth; x++) {
+            var red = data[((imageWidth * y) + x) * 4];
+            var green = data[((imageWidth * y) + x) * 4 + 1];
+            var blue = data[((imageWidth * y) + x) * 4 + 2];
+            var alpha = data[((imageWidth * y) + x) * 4 + 3];
+          }
+        }
+      }
+      var imageObj = new Image();
+      imageObj.onload = function() {
+        drawImage(this);
+      };
+      imageObj.src ="logo.jpg";
+      
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      context.rect(0, 0, canvas.width, canvas.height);
+
+      // add linear gradient
+      var grd = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+      // light blue
+      grd.addColorStop(0, '#0047ab');   
+      // dark blue
+      grd.addColorStop(1, '#e34234');
+      context.fillStyle = grd;
+      context.fill();
+
+    </script>
+   
+
+    </head>
+    
+       
+    <body style="background: black">
+        <div>
+         <h1 style="font: bold;font-style: italic;color: black;text-align: center; color: black" >SHARMA & CO</strong></h1>
+        
+        </div>
+<div id="page">
+	
+
+	<header>
+									
+                    <header style="color: plum">					
+					
+                                            <label><a href ="index.html"><input type="button" value="Home" name="a"></a></label>
+                                            <label> <a style="color: greenyellow"; href="contact.html"><input type="button" value="ORDER SPARES" name="a"></a></label>
+                                            <label><a  style="color: greenyellow" href="order.html"><input type="button" value="CONTACT US" name="a"></a></label>
+                                            <label><a  style="color: greenyellow" href="url.htm"><input type="button" value="LOCATION" name="a"></a></label>
+                    </header>
+                    <br>
+                    <hr>
+           
+                    <li><h2><a style="font: bold; color: papayawhip;text-align: center ">Company Profile</h2></a></li>
+<ul>
+    <h2><li style="font: bold;color: peachpuff;">Autoconer Spares Gallery</li></h2>
+</ul>
+</li>
+<a  style="color: palegoldenrod" href="table.html">OUR PRODUCT LISTS</a>
+<ul>
+	<li>Blowroom Spares</li>
+	<li>Carding Spares</li>
+	<li>Comber Spares</li>
+	<li>Unilap Spares</li>
+	<li>Draw Frame Spares</li>
+        <li>Speed Frame Spares</li>
+	<ul>
+		<li>Toyoda Speed Frame</li>
+	</ul>
+
+        <li> Ring Frame Spares</li>
+	<li>Autoconer Spares</li>
+	
+	
+</ul>
+</li>
+
+</ul>	
+
+<h3 style="color: papayawhip">Textile Machinery Spares</h3>
+
+<h1 style="color: black">Welcome To SHARMA & Co</h1>	
+         
+                          
+	
+</body>
+  
+</html>

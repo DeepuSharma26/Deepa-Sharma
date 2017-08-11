@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> SPARE PARTS</title>
+        <style type="text/css">
+            h1{font-family: fantasy;color: #e62020;}
+            li{color: #39ff14;}
+        </style>
+    </head>
+    
+       
+    <body style="background: black";margin: 0px;
+        padding: 0px;>
+       
+    <center>
+        <h1><strong>SHARMA & CO</strong></h1>
+<div id="page">
+	<div>
+		
+            <p style="background: peachpuff;color: mediumblue">Textile Machinery Spares</p>
+	</div>
+    
+
+	<header class="header">
+		<div class="container">
+			<div class="row">
+   
+    </style>
+  </head>
+  
+    <canvas id="myCanvas" width="300" height="200" style="border:3px solid white"></canvas>
+    <script>
+      function drawImage(imageObj) {
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+        var imageX = 69;
+        var imageY = 50;
+        var imageWidth = imageObj.width;
+        var imageHeight = imageObj.height;
+
+        context.drawImage(imageObj, imageX, imageY);
+
+        var imageData = context.getImageData(imageX, imageY, imageWidth, imageHeight);
+        var data = imageData.data;
+
+        // iterate over all pixels
+        for(var i = 0, n = data.length; i < n; i += 4) {
+          var red = data[i];
+          var green = data[i + 1];
+          var blue = data[i + 2];
+          var alpha = data[i + 3];
+        }
+
+        // pick out pixel data from x, y coordinate
+        var x = 750;
+        var y = 200;
+        var red = data[((imageWidth * y) + x) * 4];
+        var green = data[((imageWidth * y) + x) * 4 + 1];
+        var blue = data[((imageWidth * y) + x) * 4 + 2];
+        var alpha = data[((imageWidth * y) + x) * 4 + 3];
+        
+        // iterate over all pixels based on x and y coordinates
+        for(var y = 0; y < imageHeight; y++) {
+          // loop through each column
+          for(var x = 0; x < imageWidth; x++) {
+            var red = data[((imageWidth * y) + x) * 4];
+            var green = data[((imageWidth * y) + x) * 4 + 1];
+            var blue = data[((imageWidth * y) + x) * 4 + 2];
+            var alpha = data[((imageWidth * y) + x) * 4 + 3];
+          }
+        }
+      }
+      var imageObj = new Image();
+      imageObj.onload = function() {
+        drawImage(this);
+      };
+      imageObj.src = 'https://s3-ap-southeast-2.amazonaws.com/oneflare-production/avatars/21845/profile/logo.png?1422481444';
+      
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      context.rect(0, 0, canvas.width, canvas.height);
+
+      // add linear gradient
+      var grd = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+      // light blue
+      grd.addColorStop(0, '#8ED6FF');   
+      // dark blue
+      grd.addColorStop(1, '#004CB3');
+      context.fillStyle = grd;
+      context.fill();
+
+    </script>
+    </center>
+  
+                                            <ul><li>Home</li>
+                                                <li><a href="contact.html">ORDER SPARES</a></li>
+                                                <li><a href="order.html">CONTACT US</a></li>
+<li><a>Company Profile</a></li>
+<ul>
+	<li>Autoconer Spares Gallery</li>
+</ul>
+</li>
+<li>Our Product List
+<ul>
+	<li>Blowroom Spares</li>
+	<li>Carding Spares</li>
+	<li>Comber Spares</li>
+	<li>Unilap Spares</li>
+	<li>Draw Frame Spares</li>
+        <li>Speed Frame Spares</li>
+	<ul>
+		<li>Toyoda Speed Frame</li>
+	</ul>
+
+        <li> Ring Frame Spares</li>
+	<li>Autoconer Spares</li>
+	
+	
+</ul>
+</li>
+
+</ul>	
+        <center>
+                    
+	<h1>Textile Machinery Spares</h1>
+        
+        <h1>Welcome To SHARMA & Co</h1>			
+        </center>                     
+	
+</body>
+  
+</html>
